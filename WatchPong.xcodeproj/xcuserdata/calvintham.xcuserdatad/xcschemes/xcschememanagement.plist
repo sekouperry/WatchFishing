@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Notification - WatchPong WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>WatchPong WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>WatchPong.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>43CE08311ACFCDBB008176F3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>43CE08541ACFCECF008176F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

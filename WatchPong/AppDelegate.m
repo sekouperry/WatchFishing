@@ -20,6 +20,41 @@
     return YES;
 }
 
+-(void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void(^)(NSDictionary *replyInfo))reply {
+    NSLog(@"FOUND");
+    NSString* press = [userInfo objectForKey:@"press"];
+    if([press isEqualToString:@"left"])
+    {
+        [[NSNotificationCenter defaultCenter]
+         postNotificationName:@"press_left"
+         object:self];
+    }
+    if([press isEqualToString:@"right"])
+    {
+        NSLog(@"PRESSED RIGHT");
+        [[NSNotificationCenter defaultCenter]
+         postNotificationName:@"press_right"
+         object:self];
+    }
+    if([press isEqualToString:@"cast"])
+    {
+        [[NSNotificationCenter defaultCenter]
+         postNotificationName:@"press_cast"
+         object:self];
+    }
+    if([press isEqualToString:@"reel"])
+    {
+        [[NSNotificationCenter defaultCenter]
+         postNotificationName:@"press_reel"
+         object:self];
+    }
+    
+    //look at the userInfo dictionary to figure out why we're being called
+    //do some stuff
+    //send back a dictionary of data to the watchkit extension
+    reply(@{@"numberOfUsers": @(5)});
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
