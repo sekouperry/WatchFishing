@@ -31,5 +31,6 @@
     
     SKSpriteNode* arrow;
     int level; //1 2 3
+    
 }
 @end

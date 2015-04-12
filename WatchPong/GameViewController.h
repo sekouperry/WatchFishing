@@ -10,5 +10,11 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface GameViewController : UIViewController
-
+{
+    __weak IBOutlet UIButton *controlsButton;
+    __weak IBOutlet UIButton *lButton;
+    __weak IBOutlet UIButton *rButton;
+    __weak IBOutlet UIButton *reelButton;
+    __weak IBOutlet UIButton *castButton;
+}
 @end

@@ -5,10 +5,8 @@
 //  Created by Calvin Tham on 4/4/15.
 //  Copyright (c) 2015 Calvin Tham. All rights reserved.
 //
-
 #import "GameScene.h"
 #define SCREENWIDTH 750
-
 #define SCREENHEIGHT 750
 @implementation GameScene
 
@@ -103,7 +101,7 @@
     SKAction* moveBoth = [SKAction sequence:[NSArray arrayWithObjects:moveDown,moveUp, moveUp, moveDown, nil]];
     [circleMarker runAction: [SKAction repeatActionForever:moveBoth]];
     arrow = [SKSpriteNode spriteNodeWithImageNamed:@"arrow"];
-    [arrow setPosition:circleMarker.position];
+
     [self addChild:arrow];
     
     hook = [SKSpriteNode spriteNodeWithImageNamed:@"hook"];
@@ -130,6 +128,14 @@
     SKAction *flyincircle = [SKAction repeatActionForever:followTrack];
     [fish runAction:[SKAction repeatActionForever:flyincircle]];
 }
+//
+//-(void)addFishLevel3Movement
+//{
+//    CGPathRef circle = CGPathCreateWithEllipseInRect(CGRectMake(fish.position.x+50,fish.position.y-200,25,100), NULL);
+//    SKAction *followTrack = [SKAction followPath:circle asOffset:NO orientToPath:YES duration:2.5];
+//    SKAction *flyincircle = [SKAction repeatActionForever:followTrack];
+//    [fish runAction:[SKAction repeatActionForever:flyincircle]];
+//}
 
 -(void)addFishLevel3Movement
 {
@@ -195,7 +201,7 @@
     //[self moveFish];
     if([state isEqualToString:@"fishing"] || [state isEqualToString:@"hook_cast"] || [state isEqualToString:@"reeling"])
     {
-        [arrow setPosition:CGPointMake(circleMarker.position.x, circleMarker.position.y - arrow.size.height)];
+        [arrow setPosition:CGPointMake(circleMarker.position.x, circleMarker.position.y - arrow.size.height/1.25)];
     }
     if([hook intersectsNode:fish] && hook.size.height < 50 && ![state isEqualToString:@"reeling"])
     {
@@ -316,6 +322,7 @@
 {
     if([state isEqualToString:@"fishing"])
         return;
+    
     SKAction* moveToShip = [SKAction moveTo:CGPointMake(CGRectGetMidX(self.frame), 0) duration:0.5];
     [hook runAction:moveToShip];
     [sound1 playSound:@"reeling"];
