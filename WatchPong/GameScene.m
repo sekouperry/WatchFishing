@@ -8,6 +8,7 @@
 #import "GameScene.h"
 #define SCREENWIDTH 750
 #define SCREENHEIGHT 750
+
 @implementation GameScene
 
 -(void)didMoveToView:(SKView *)view {
@@ -24,6 +25,7 @@
 {
     [circleMarker setHidden:NO];
     [arrow setHidden:NO];
+    [fish removeFromParent];
     fish = [SKSpriteNode spriteNodeWithImageNamed:@"fish"];
     [fish setZPosition:7];
     float fishR = 50;
@@ -37,19 +39,27 @@
     if(level==1)
     {
         [self addFishLevel1Movement];
-        [self displayLogo:@"level1"];
+        if(!tutorialDone)
+            [self displayLogo:@"level1"];
     }
     else if(level==2)
     {
         [self addFishLevel2Movement];
-        [self displayLogo:@"level2"];
+        if(!tutorialDone)
+            [self displayLogo:@"level2"];
     }
     else if(level==3)
     {
         [self addFishLevel3Movement];
-        [self displayLogo:@"level3"];
+        if(!tutorialDone)
+            [self displayLogo:@"level3"];
     }
     
+    if(tutorialDone)
+    {
+        [self removeTimer];
+        [self beginTimer];
+    }
     state = @"fishing";
 }
 
@@ -111,12 +121,81 @@
     sound1 = [[Sound alloc] init];
     sound2 = [[Sound alloc] init];
     sound3 = [[Sound alloc] init];
+    
+    [self removeTimer];
+    tutorialDone = NO;
+}
+
+-(void)timerSpriteSetup:(SKSpriteNode*)sprite
+{
+    [sprite setPosition:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))];
+    [sprite setScale:2];
+    [sprite setZPosition:12];
+    [sprite setName:@"timer"];
+    [self addChild:sprite];
+    
+    [sound3 playSound:@"win"];
+}
+
+-(void)removeTimer
+{
+    for(int i = 0; i < self.children.count; i++)
+    {
+        if([[self.children[i] name] isEqual:@"timer"])
+        {
+            [self.children[i] removeFromParent];
+        }
+    }
+}
+-(void)beginTimer
+{
+    float timePerNum = 1.5;
+    SKSpriteNode* five = [SKSpriteNode spriteNodeWithImageNamed:@"5"];
+    [self timerSpriteSetup:five];
+    SKAction* fade = [SKAction fadeAlphaTo:0 duration:timePerNum];
+    
+    [five runAction:fade completion:^(void)
+     {
+         [five removeFromParent];
+         SKSpriteNode* four = [SKSpriteNode spriteNodeWithImageNamed:@"4"];
+         [self timerSpriteSetup:four];
+         [four runAction:fade completion:^(void)
+          {
+              [four removeFromParent];
+              SKSpriteNode* three = [SKSpriteNode spriteNodeWithImageNamed:@"3"];
+              [self timerSpriteSetup:three];
+              [three runAction:fade completion:^(void)
+               {
+                   [three removeFromParent];
+                   SKSpriteNode* two = [SKSpriteNode spriteNodeWithImageNamed:@"2"];
+                   [self timerSpriteSetup:two];
+                   [two runAction:fade completion:^(void)
+                    {
+                        [two removeFromParent];
+                        SKSpriteNode* one = [SKSpriteNode spriteNodeWithImageNamed:@"1"];
+                        [self timerSpriteSetup:one];
+                        [one runAction:fade completion:^(void)
+                         {
+                             [one removeFromParent];
+                             level = 1;
+                             tutorialDone = NO;
+                             [self lightReset];
+                         }];
+                    }];
+               }];
+          }];
+     }];
+    
 }
 
 -(void)addFishLevel1Movement
 {
     CGPathRef circle = CGPathCreateWithEllipseInRect(CGRectMake(fish.position.x-100,fish.position.y-100,200,200), NULL);
-    SKAction *followTrack = [SKAction followPath:circle asOffset:NO orientToPath:YES duration:7];
+    SKAction *followTrack;
+    if(!tutorialDone)
+        followTrack = [SKAction followPath:circle asOffset:NO orientToPath:YES duration:7];
+    else if(tutorialDone)
+        followTrack = [SKAction followPath:circle asOffset:NO orientToPath:YES duration:3.5];
     SKAction *flyincircle = [SKAction repeatActionForever:followTrack];
     [fish runAction:[SKAction repeatActionForever:flyincircle]];
 }
@@ -124,23 +203,26 @@
 -(void)addFishLevel2Movement
 {
     CGPathRef circle = CGPathCreateWithEllipseInRect(CGRectMake(fish.position.x-400,fish.position.y-200,800,400), NULL);
-    SKAction *followTrack = [SKAction followPath:circle asOffset:NO orientToPath:YES duration:20];
+    SKAction *followTrack;
+    if(!tutorialDone)
+        followTrack = [SKAction followPath:circle asOffset:NO orientToPath:YES duration:20];
+    if(tutorialDone)
+        followTrack = [SKAction followPath:circle asOffset:NO orientToPath:YES duration:10];
+    
     SKAction *flyincircle = [SKAction repeatActionForever:followTrack];
     [fish runAction:[SKAction repeatActionForever:flyincircle]];
 }
-//
-//-(void)addFishLevel3Movement
-//{
-//    CGPathRef circle = CGPathCreateWithEllipseInRect(CGRectMake(fish.position.x+50,fish.position.y-200,25,100), NULL);
-//    SKAction *followTrack = [SKAction followPath:circle asOffset:NO orientToPath:YES duration:2.5];
-//    SKAction *flyincircle = [SKAction repeatActionForever:followTrack];
-//    [fish runAction:[SKAction repeatActionForever:flyincircle]];
-//}
 
 -(void)addFishLevel3Movement
 {
     CGPathRef circle = CGPathCreateWithEllipseInRect(CGRectMake(fish.position.x-400,fish.position.y-200,800,50), NULL);
-    SKAction *followTrack = [SKAction followPath:circle asOffset:NO orientToPath:YES duration:2.5];
+    SKAction *followTrack;
+    
+    if(!tutorialDone)
+        followTrack = [SKAction followPath:circle asOffset:NO orientToPath:YES duration:2.5];
+   if(tutorialDone)
+        followTrack = [SKAction followPath:circle asOffset:NO orientToPath:YES duration:2.5];
+    
     SKAction *flyincircle = [SKAction repeatActionForever:followTrack];
     [fish runAction:[SKAction repeatActionForever:flyincircle]];
 }
@@ -242,24 +324,18 @@
     
     if([state isEqualToString:@"win"])
     {
-        //[self removeAllChildren];
-        
         if(level < 3)
         {
             level++;
         }
         else
-            level = 1;
-        
-        [self lightReset];
-        
-        switch ([self genRandNum:1 :1])
         {
-            case 1:
-                [sound2 playSound:@"win"];
-                break;
+            level = 1;
+            tutorialDone = YES;
         }
         
+        [self lightReset];
+        [sound2 playSound:@"win"];
     }
 }
 
