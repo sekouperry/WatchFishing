@@ -1,21 +1,18 @@
 {
   "images" : [
     {
-      "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "icon copy 3-2.png",
+      "size" : "29x29",
       "scale" : "1x"
     },
     {
-      "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "icon copy 3-1.png",
+      "size" : "29x29",
       "scale" : "2x"
     },
     {
-      "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "icon copy 3.png",
+      "size" : "29x29",
       "scale" : "3x"
     },
     {
@@ -149,7 +146,7 @@
       "size" : "44x44",
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "icon copy 10.png",
+      "filename" : "icon copy 11.png",
       "role" : "longLook",
       "subtype" : "42mm"
     },
@@ -157,7 +154,7 @@
       "size" : "86x86",
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "icon copy 11.png",
+      "filename" : "icon copy 12.png",
       "role" : "quickLook",
       "subtype" : "38mm"
     },
@@ -165,7 +162,7 @@
       "size" : "98x98",
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "icon copy 12.png",
+      "filename" : "icon copy 14.png",
       "role" : "quickLook",
       "subtype" : "42mm"
     }

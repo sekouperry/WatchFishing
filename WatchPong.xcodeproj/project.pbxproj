@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4318E6AC1ADE36F200476CEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43CE08511ACFCECF008176F3 /* Images.xcassets */; };
+		4318E6AD1ADE36F300476CEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43CE08511ACFCECF008176F3 /* Images.xcassets */; };
+		4318E6AE1ADE36F900476CEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43CE085F1ACFCECF008176F3 /* Images.xcassets */; };
+		4318E6AF1ADE36FA00476CEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43CE085F1ACFCECF008176F3 /* Images.xcassets */; };
 		431B747A1AD192C900B1D85A /* level1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 431B74771AD192C900B1D85A /* level1@2x.png */; };
 		431B747B1AD192C900B1D85A /* level2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 431B74781AD192C900B1D85A /* level2@2x.png */; };
 		431B747C1AD192C900B1D85A /* level3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 431B74791AD192C900B1D85A /* level3@2x.png */; };
@@ -461,6 +465,7 @@
 					};
 					43CE08541ACFCECF008176F3 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = JLZ37QX4VP;
 					};
 				};
 			};
@@ -493,6 +498,7 @@
 				43B857F21ADC8C690040B5AE /* 2@2x.png in Resources */,
 				43C630531AD0EC1700765F58 /* move_circle.aiff in Resources */,
 				43CE082D1ACFCDBB008176F3 /* LaunchScreen.xib in Resources */,
+				4318E6AE1ADE36F900476CEB /* Images.xcassets in Resources */,
 				43B857F31ADC8C690040B5AE /* 3@2x.png in Resources */,
 				43CE082A1ACFCDBB008176F3 /* Images.xcassets in Resources */,
 				431B747B1AD192C900B1D85A /* level2@2x.png in Resources */,
@@ -505,6 +511,7 @@
 				43B857F11ADC8C690040B5AE /* 1@2x.png in Resources */,
 				43C630521AD0EC1700765F58 /* hook_splash2.aiff in Resources */,
 				43C630671AD0F9DC00765F58 /* sure_is_one_tricky_sea_creature.aiff in Resources */,
+				4318E6AC1ADE36F200476CEB /* Images.xcassets in Resources */,
 				43C630541AD0EC1700765F58 /* reeling.aiff in Resources */,
 				43CE08221ACFCDB8008176F3 /* GameScene.sks in Resources */,
 				431B747A1AD192C900B1D85A /* level1@2x.png in Resources */,
@@ -542,6 +549,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43CE08561ACFCECF008176F3 /* WatchPong WatchKit App.app in Resources */,
+				4318E6AF1ADE36FA00476CEB /* Images.xcassets in Resources */,
 				43A786481AD08A74004B1588 /* hook@2x.png in Resources */,
 				43CE08521ACFCECF008176F3 /* Images.xcassets in Resources */,
 				43A786521AD09E9C004B1588 /* poleRavel@2x.png in Resources */,
@@ -556,6 +564,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43CE085E1ACFCECF008176F3 /* Interface.storyboard in Resources */,
+				4318E6AD1ADE36F300476CEB /* Images.xcassets in Resources */,
 				43A786491AD08A75004B1588 /* hook@2x.png in Resources */,
 				43CE08601ACFCECF008176F3 /* Images.xcassets in Resources */,
 				43A786531AD09E9D004B1588 /* poleRavel@2x.png in Resources */,
@@ -785,6 +794,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -802,6 +812,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IBSC_MODULE = WatchPong_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchPong WatchKit App/Info.plist";
 				PRODUCT_NAME = "WatchPong WatchKit App";
