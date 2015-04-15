@@ -123,7 +123,6 @@
     sound3 = [[Sound alloc] init];
     
     [self removeTimer];
-    tutorialDone = NO;
 }
 
 -(void)timerSpriteSetup:(SKSpriteNode*)sprite
@@ -178,7 +177,6 @@
                          {
                              [one removeFromParent];
                              level = 1;
-                             tutorialDone = NO;
                              [self lightReset];
                          }];
                     }];
@@ -274,7 +272,6 @@
 {
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
-        
     }
 }
 
@@ -327,14 +324,23 @@
         if(level < 3)
         {
             level++;
+            [self lightReset];
         }
-        else
+        else if(tutorialDone==NO)
         {
             level = 1;
             tutorialDone = YES;
+            [self lightReset];
+        }
+        else
+        {
+            SKSpriteNode* winImage = [SKSpriteNode spriteNodeWithImageNamed:@"win"];
+            [winImage setPosition:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))];
+            [winImage setScale:2];
+            [winImage setZPosition:12];
+            [self addChild:winImage];
         }
         
-        [self lightReset];
         [sound2 playSound:@"win"];
     }
 }

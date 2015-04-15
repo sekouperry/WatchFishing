@@ -10,6 +10,7 @@
 		431B747A1AD192C900B1D85A /* level1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 431B74771AD192C900B1D85A /* level1@2x.png */; };
 		431B747B1AD192C900B1D85A /* level2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 431B74781AD192C900B1D85A /* level2@2x.png */; };
 		431B747C1AD192C900B1D85A /* level3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 431B74791AD192C900B1D85A /* level3@2x.png */; };
+		435124051ADE207C00DF7F59 /* win@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 435124041ADE207C00DF7F59 /* win@2x.png */; };
 		437CABDE1ACFE757000F5CED /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE081F1ACFCDB8008176F3 /* GameScene.m */; };
 		438AF18D1AD0BF4800E79FAB /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 438AF18C1AD0BF4600E79FAB /* arrow@2x.png */; };
 		43A786431AD08A52004B1588 /* fish@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A786401AD08A52004B1588 /* fish@2x.png */; };
@@ -112,6 +113,7 @@
 		431B74771AD192C900B1D85A /* level1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level1@2x.png"; sourceTree = "<group>"; };
 		431B74781AD192C900B1D85A /* level2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level2@2x.png"; sourceTree = "<group>"; };
 		431B74791AD192C900B1D85A /* level3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level3@2x.png"; sourceTree = "<group>"; };
+		435124041ADE207C00DF7F59 /* win@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "win@2x.png"; sourceTree = "<group>"; };
 		438AF18C1AD0BF4600E79FAB /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
 		43A786401AD08A52004B1588 /* fish@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fish@2x.png"; sourceTree = "<group>"; };
 		43A786411AD08A52004B1588 /* hook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hook@2x.png"; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 		43CE086B1ACFD2CB008176F3 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				435124041ADE207C00DF7F59 /* win@2x.png */,
 				43B857CD1ADB66DD0040B5AE /* timer */,
 				43BB4E411AD35DCF001D8C70 /* arrow.atlas */,
 				431B74771AD192C900B1D85A /* level1@2x.png */,
@@ -446,6 +449,7 @@
 				TargetAttributes = {
 					43CE08131ACFCDB5008176F3 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = JLZ37QX4VP;
 					};
 					43CE08311ACFCDBB008176F3 = {
 						CreatedOnToolsVersion = 6.2;
@@ -453,6 +457,7 @@
 					};
 					43CE08451ACFCECF008176F3 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = JLZ37QX4VP;
 					};
 					43CE08541ACFCECF008176F3 = {
 						CreatedOnToolsVersion = 6.2;
@@ -518,6 +523,7 @@
 				43A786511AD09CF2004B1588 /* poleRavel@2x.png in Resources */,
 				43C630501AD0EC1700765F58 /* fish_bite.aiff in Resources */,
 				43C630511AD0EC1700765F58 /* hook_splash.aiff in Resources */,
+				435124051ADE207C00DF7F59 /* win@2x.png in Resources */,
 				43B857F51ADC8C690040B5AE /* 5@2x.png in Resources */,
 				43BB4E421AD35DCF001D8C70 /* arrow.atlas in Resources */,
 				43C630681AD0F9DC00765F58 /* toTheLeft.aiff in Resources */,
@@ -721,9 +727,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WatchPong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WatchPong;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -731,9 +739,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WatchPong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WatchPong;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -751,7 +761,7 @@
 				);
 				INFOPLIST_FILE = WatchPongTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WatchPongTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchPong.app/WatchPong";
 			};
 			name = Debug;
@@ -766,7 +776,7 @@
 				);
 				INFOPLIST_FILE = WatchPongTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WatchPongTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchPong.app/WatchPong";
 			};
 			name = Release;
@@ -781,7 +791,7 @@
 				);
 				IBSC_MODULE = WatchPong_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchPong WatchKit App/Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "WatchPong WatchKit App";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -794,7 +804,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				IBSC_MODULE = WatchPong_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchPong WatchKit App/Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "WatchPong WatchKit App";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -804,13 +814,14 @@
 		43CE08681ACFCECF008176F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "WatchPong WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = "WatchPong WatchKit Extension";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -818,9 +829,10 @@
 		43CE08691ACFCECF008176F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "WatchPong WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = "WatchPong WatchKit Extension";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
