@@ -111,7 +111,7 @@
     SKAction* moveBoth = [SKAction sequence:[NSArray arrayWithObjects:moveDown,moveUp, moveUp, moveDown, nil]];
     [circleMarker runAction: [SKAction repeatActionForever:moveBoth]];
     arrow = [SKSpriteNode spriteNodeWithImageNamed:@"arrow"];
-
+    [arrow setZPosition:12];
     [self addChild:arrow];
     
     hook = [SKSpriteNode spriteNodeWithImageNamed:@"hook"];
@@ -337,8 +337,9 @@
             SKSpriteNode* winImage = [SKSpriteNode spriteNodeWithImageNamed:@"win"];
             [winImage setPosition:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))];
             [winImage setScale:2];
-            [winImage setZPosition:12];
+            [winImage setZPosition:13];
             [self addChild:winImage];
+            [self removeTimer];
         }
         
         [sound2 playSound:@"win"];
