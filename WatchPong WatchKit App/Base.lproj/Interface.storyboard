@@ -13,15 +13,15 @@
                         <group width="1" height="12" alignment="left" id="D0A-xN-UzH">
                             <items>
                                 <label height="12" alignment="left" text="CATCH THE FISH!" id="chP-mA-T25">
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="11"/>
                                 </label>
                             </items>
                         </group>
                         <group width="1" alignment="left" id="yim-Oe-d4g">
                             <items>
                                 <button width="40" alignment="left" title="L" id="Ol6-gE-d34">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="lPress" destination="AgC-eL-Hgc" id="rFK-Uv-Edr"/>
@@ -29,14 +29,14 @@
                                 </button>
                                 <button width="41" height="51" alignment="center" title="CAST" backgroundImage="hook.png" id="65I-9n-ueg">
                                     <accessibilityTraits key="accessibilityTraits" none="YES" button="YES" image="YES" playsSound="YES"/>
-                                    <color key="titleColor" red="0.15961006512418308" green="0.96133039003749132" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="11"/>
                                     <connections>
                                         <action selector="castPress" destination="AgC-eL-Hgc" id="IIk-Iq-hpm"/>
                                     </connections>
                                 </button>
                                 <button width="40" alignment="right" title="R" id="PrF-4T-X6z">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="rPress" destination="AgC-eL-Hgc" id="Huz-YA-QgX"/>
@@ -46,7 +46,8 @@
                         </group>
                         <button width="70" height="70" alignment="center" title="REEL" backgroundImage="poleRavel.png" id="SoM-Mh-Jcv">
                             <accessibilityTraits key="accessibilityTraits" none="YES" button="YES" image="YES" playsSound="YES"/>
-                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <variation key="device=watch42mm" height="67" width="69"/>
                             <connections>
                                 <action selector="reelPress" destination="AgC-eL-Hgc" id="BIS-v3-LGw"/>
                             </connections>
@@ -55,7 +56,7 @@
                     <color key="backgroundColor" red="0.90057406767955805" green="0.46759080171261957" blue="0.069106743771096907" alpha="1" colorSpace="calibratedRGB"/>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="315"/>
+            <point key="canvasLocation" x="280.71794871794873" y="264.58974358974359"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
