@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LVB-YS-i5n">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Game View Controller-->
@@ -16,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0go-ct-D09">
-                                <rect key="frame" x="382" y="243" width="102" height="57"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0go-ct-D09">
+                                <rect key="frame" x="345" y="252" width="137" height="57"/>
                                 <state key="normal" title="REEL" image="poleRavel.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -30,8 +31,11 @@
                                     <action selector="reelButtonPress:" destination="LVB-YS-i5n" eventType="touchUpInside" id="GgT-L2-5WD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nms-sf-bbd">
-                                <rect key="frame" x="381" y="164" width="103" height="83"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nms-sf-bbd">
+                                <rect key="frame" x="362" y="201" width="103" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="z3b-gV-vqP"/>
+                                </constraints>
                                 <state key="normal" title="CAST" image="hook.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -39,8 +43,11 @@
                                     <action selector="castButtonPress:" destination="LVB-YS-i5n" eventType="touchUpInside" id="MF3-Zu-W4r"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8A-5R-diX">
-                                <rect key="frame" x="500" y="249" width="62" height="55"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8A-5R-diX">
+                                <rect key="frame" x="490" y="257" width="62" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="A4X-wy-rEZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="R">
@@ -50,8 +57,11 @@
                                     <action selector="rButtonPress:" destination="LVB-YS-i5n" eventType="touchUpInside" id="1U2-in-Np5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQQ-L7-JZn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQQ-L7-JZn">
                                 <rect key="frame" x="10" y="257" width="59" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="59" id="ZDi-6W-QpA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="L">
@@ -61,24 +71,38 @@
                                     <action selector="lButtonPress:" destination="LVB-YS-i5n" eventType="touchUpInside" id="sgt-cy-fJ1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZC-bX-hY4">
-                                <rect key="frame" x="16" y="13" width="93" height="30"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="ON WATCH">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FcQ-5o-9XG">
+                                <rect key="frame" x="16" y="28" width="123" height="29"/>
+                                <segments>
+                                    <segment title="WATCH"/>
+                                    <segment title="PHONE"/>
+                                </segments>
                                 <connections>
-                                    <action selector="changeControls:" destination="LVB-YS-i5n" eventType="touchUpInside" id="ss2-4U-XeJ"/>
+                                    <action selector="changeControls:" destination="LVB-YS-i5n" eventType="valueChanged" id="K0o-VF-oQl"/>
                                 </connections>
-                            </button>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b3d-qh-BLL" firstAttribute="top" secondItem="0go-ct-D09" secondAttribute="bottom" constant="11" id="Cqh-c1-sJv"/>
+                            <constraint firstItem="nms-sf-bbd" firstAttribute="centerX" secondItem="0go-ct-D09" secondAttribute="centerX" id="Cym-m1-dff"/>
+                            <constraint firstItem="b3d-qh-BLL" firstAttribute="top" secondItem="e8A-5R-diX" secondAttribute="bottom" constant="8" symbolic="YES" id="HmR-GM-PLY"/>
+                            <constraint firstItem="e8A-5R-diX" firstAttribute="leading" secondItem="0go-ct-D09" secondAttribute="trailing" constant="8" symbolic="YES" id="IwY-ZG-v1i"/>
+                            <constraint firstItem="LQQ-L7-JZn" firstAttribute="centerY" secondItem="0go-ct-D09" secondAttribute="centerY" id="b6L-ka-maN"/>
+                            <constraint firstItem="e8A-5R-diX" firstAttribute="top" secondItem="PCf-gQ-wO7" secondAttribute="bottom" constant="237" id="dmM-rK-019"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nms-sf-bbd" secondAttribute="trailing" constant="87" id="faB-FH-z6i"/>
+                            <constraint firstItem="nms-sf-bbd" firstAttribute="top" secondItem="PCf-gQ-wO7" secondAttribute="bottom" constant="181" id="ouD-hh-sgn"/>
+                            <constraint firstItem="e8A-5R-diX" firstAttribute="trailing" secondItem="bdc-N1-crn" secondAttribute="trailingMargin" id="uTH-cA-h8e"/>
+                            <constraint firstItem="LQQ-L7-JZn" firstAttribute="leading" secondItem="bdc-N1-crn" secondAttribute="leadingMargin" constant="-6" id="ubr-ri-RhE"/>
+                            <constraint firstItem="0go-ct-D09" firstAttribute="top" secondItem="nms-sf-bbd" secondAttribute="bottom" constant="8" symbolic="YES" id="wQ9-eb-5AE"/>
+                            <constraint firstItem="LQQ-L7-JZn" firstAttribute="top" secondItem="e8A-5R-diX" secondAttribute="top" id="zgz-bl-MLg"/>
+                            <constraint firstItem="FcQ-5o-9XG" firstAttribute="leading" secondItem="bdc-N1-crn" secondAttribute="leadingMargin" id="zyU-qz-VVO"/>
+                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="castButton" destination="nms-sf-bbd" id="MGH-zx-HWX"/>
-                        <outlet property="controlsButton" destination="FZC-bX-hY4" id="2yZ-ln-hW3"/>
                         <outlet property="lButton" destination="LQQ-L7-JZn" id="62W-oC-YN5"/>
                         <outlet property="rButton" destination="e8A-5R-diX" id="6ab-Yb-VVR"/>
                         <outlet property="reelButton" destination="0go-ct-D09" id="5mW-sP-ZWe"/>
