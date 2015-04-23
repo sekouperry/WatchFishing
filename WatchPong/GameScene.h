@@ -28,6 +28,7 @@
     Sound* sound1;
     Sound* sound2;
     Sound* sound3;
+    Sound* sound4;
     
     SKSpriteNode* arrow;
     int level; //1 2 3

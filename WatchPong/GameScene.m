@@ -121,6 +121,7 @@
     sound1 = [[Sound alloc] init];
     sound2 = [[Sound alloc] init];
     sound3 = [[Sound alloc] init];
+    sound4 = [[Sound alloc] init];
     
     [self removeTimer];
 }
