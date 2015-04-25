@@ -34,5 +34,6 @@
     int level; //1 2 3
     
     bool tutorialDone;
+    bool beatTheGame;
 }
 @end

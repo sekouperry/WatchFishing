@@ -19,6 +19,8 @@
     
     level = 1;
     [self setVariables];
+    [sound4 playSoundForever:@"kcobble"];
+    
 }
 
 -(void)lightReset
@@ -326,24 +328,28 @@
         {
             level++;
             [self lightReset];
+            [sound2 playSound:@"win"];
         }
         else if(tutorialDone==NO)
         {
             level = 1;
             tutorialDone = YES;
             [self lightReset];
+            [sound2 playSound:@"win"];
         }
-        else
+        else if(!beatTheGame)
         {
+            [self removeAllChildren];
             SKSpriteNode* winImage = [SKSpriteNode spriteNodeWithImageNamed:@"win"];
             [winImage setPosition:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))];
             [winImage setScale:2];
             [winImage setZPosition:13];
             [self addChild:winImage];
             [self removeTimer];
+            [sound4 playSoundForever:@"alecisthearsonist"];
+            beatTheGame = YES;
         }
         
-        [sound2 playSound:@"win"];
     }
 }
 
