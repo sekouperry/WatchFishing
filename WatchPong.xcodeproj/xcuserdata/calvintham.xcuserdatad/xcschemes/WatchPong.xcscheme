@@ -73,16 +73,27 @@
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES"
       notificationPayloadFile = "WatchPong WatchKit Extension/PushNotificationPayload.apns">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/(null)">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "43CE08131ACFCDB5008176F3"
-            BuildableName = "WatchPong.app"
-            BlueprintName = "WatchPong"
+            BlueprintIdentifier = "43CE08541ACFCECF008176F3"
+            BuildableName = "WatchPong WatchKit App.app"
+            BlueprintName = "WatchPong WatchKit App"
             ReferencedContainer = "container:WatchPong.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "43CE08541ACFCECF008176F3"
+            BuildableName = "WatchPong WatchKit App.app"
+            BlueprintName = "WatchPong WatchKit App"
+            ReferencedContainer = "container:WatchPong.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

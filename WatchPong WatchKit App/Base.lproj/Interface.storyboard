@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
@@ -13,21 +13,22 @@
                         <group width="1" height="12" alignment="left" id="D0A-xN-UzH">
                             <items>
                                 <label height="12" alignment="left" text="CATCH THE FISH!" id="chP-mA-T25">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="font" type="system" pointSize="11"/>
+                                    <variation key="device=watch42mm" text="OPEN THE iPhone App!"/>
                                 </label>
                             </items>
                         </group>
                         <group width="1" alignment="left" id="yim-Oe-d4g">
                             <items>
-                                <button width="40" alignment="left" title="L" id="Ol6-gE-d34">
+                                <button width="0.30000000000000016" widthAdjustment="3" height="0.60000000000000009" heightAdjustment="6" alignment="left" backgroundImage="l.png" id="Ol6-gE-d34">
                                     <color key="titleColor" red="0.14999999999999999" green="0.14999999999999999" blue="0.14999999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="lPress" destination="AgC-eL-Hgc" id="rFK-Uv-Edr"/>
                                     </connections>
                                 </button>
-                                <button width="41" height="51" alignment="center" title="CAST" backgroundImage="hook.png" id="65I-9n-ueg">
+                                <button width="0.30000000000000016" widthAdjustment="2" height="0.80000000000000004" heightAdjustment="2" alignment="center" backgroundImage="hook_but.png" id="65I-9n-ueg">
                                     <accessibilityTraits key="accessibilityTraits" none="YES" button="YES" image="YES" playsSound="YES"/>
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="11"/>
@@ -35,7 +36,7 @@
                                         <action selector="castPress" destination="AgC-eL-Hgc" id="IIk-Iq-hpm"/>
                                     </connections>
                                 </button>
-                                <button width="40" alignment="right" title="R" id="PrF-4T-X6z">
+                                <button width="0.30000000000000016" widthAdjustment="3" height="0.60000000000000009" heightAdjustment="6" alignment="right" backgroundImage="r.png" id="PrF-4T-X6z">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                     <connections>
@@ -44,10 +45,9 @@
                                 </button>
                             </items>
                         </group>
-                        <button width="70" height="70" alignment="center" title="REEL" backgroundImage="poleRavel.png" id="SoM-Mh-Jcv">
+                        <button width="0.50000000000000011" widthAdjustment="2" height="0.40000000000000013" heightAdjustment="6" alignment="center" backgroundImage="reel_but.png" id="SoM-Mh-Jcv">
                             <accessibilityTraits key="accessibilityTraits" none="YES" button="YES" image="YES" playsSound="YES"/>
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            <variation key="device=watch42mm" height="67" width="69"/>
                             <connections>
                                 <action selector="reelPress" destination="AgC-eL-Hgc" id="BIS-v3-LGw"/>
                             </connections>
@@ -56,7 +56,7 @@
                     <color key="backgroundColor" red="0.90057406767955805" green="0.46759080171261957" blue="0.069106743771096907" alpha="1" colorSpace="calibratedRGB"/>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="280.71794871794873" y="264.58974358974359"/>
+            <point key="canvasLocation" x="280" y="210.5"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
